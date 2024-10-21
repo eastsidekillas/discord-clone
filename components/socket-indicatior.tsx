@@ -14,7 +14,7 @@ export function SocketIndicatior() {
         variant="outline"
         className="bg-yellow-600 text-white border-none"
       >
-        Fallback: Polling every 1s
+        Fallback: Опрос 1сек.
       </Badge>
     );
 
@@ -23,7 +23,7 @@ export function SocketIndicatior() {
       variant="outline"
       className="bg-emerald-600 text-white border-none"
     >
-      Live: Real-time updates
+      Live: Сокеты работают
     </Badge>
   );
 }

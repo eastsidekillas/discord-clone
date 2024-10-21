@@ -15,7 +15,7 @@ export function ChatVideoButton() {
   const isVideo = searchParams?.get("video");
 
   const Icon = isVideo ? VideoOff : Video;
-  const tooltipLabel = isVideo ? "End video call" : "Start video call";
+  const tooltipLabel = isVideo ? "Завершить видеозвонок" : "Начать видеозвонок";
 
   const onClick = () => {
     const url = qs.stringifyUrl(

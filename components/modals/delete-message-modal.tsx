@@ -51,25 +51,25 @@ export function DeleteMessageModal() {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Delete Message
+            Удалить сообщение
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Are you sure you want to do this?
+            Вы уверены, что хотите удалить сообщение?
             <br />
-            The message will be permanently deleted.
+            Сообщение будет удалено навсегда.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="bg-gray-100 px-6 py-4">
           <div className="flex items-center justify-between w-full">
             <Button variant="ghost" disabled={isLoading} onClick={onClose}>
-              Cancel
+              Отменить
             </Button>
             <Button
-              variant="primary"
+              variant="destructive"
               disabled={isLoading}
               onClick={onClick}
             >
-              Confirm
+              Удалить сообщение
             </Button>
           </div>
         </DialogFooter>

@@ -27,7 +27,7 @@ import { FileUpload } from "@/components/file-upload";
 import { useModal } from "@/hooks/use-modal-store";
 
 const formSchema = z.object({
-  fileUrl: z.string().min(1, { message: "Attachment is required." })
+  fileUrl: z.string().min(1, { message: "Требуется вложение." })
 });
 
 export function MessageFileModal() {
@@ -76,10 +76,10 @@ export function MessageFileModal() {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Add an attachment
+            Добавить вложение
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Send a file as a message.
+            Отправьте файл как сообщение.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -108,7 +108,7 @@ export function MessageFileModal() {
             </div>
             <DialogFooter className="bg-gray-100 px-6 py-4">
               <Button disabled={isLoading} variant="primary">
-                Send
+                Отправить вложение
               </Button>
             </DialogFooter>
           </form>

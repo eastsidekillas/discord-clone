@@ -98,10 +98,10 @@ export function MembersModal() {
       <DialogContent className="bg-white text-black overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Manage Members
+            Управление участниками
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            {server?.members?.length} Members
+            {server?.members?.length} участники
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="mt-8 max-h-[420px] pr-6">
@@ -126,7 +126,7 @@ export function MembersModal() {
                         <DropdownMenuSub>
                           <DropdownMenuSubTrigger className="flex items-center">
                             <ShieldQuestion className="w-4 h-4 mr-2" />
-                            <span>Role</span>
+                            <span>Роль</span>
                           </DropdownMenuSubTrigger>
                           <DropdownMenuPortal>
                             <DropdownMenuSubContent>
@@ -134,7 +134,7 @@ export function MembersModal() {
                                 onClick={() => onRoleChange(member.id, "GUEST")}
                               >
                                 <Shield className="h-4 w-4 mr-2" />
-                                Guest
+                                Гость
                                 {member.role === "GUEST" && (
                                   <Check className="h4 w-4 ml-auto" />
                                 )}
@@ -145,7 +145,7 @@ export function MembersModal() {
                                 }
                               >
                                 <ShieldCheck className="h-4 w-4 mr-2" />
-                                Moderator
+                                Модератор
                                 {member.role === "MODERATOR" && (
                                   <Check className="h4 w-4 ml-auto" />
                                 )}
@@ -156,7 +156,7 @@ export function MembersModal() {
                         <DropdownMenuSeparator />
                         <DropdownMenuItem onClick={() => onKick(member.id)}>
                           <Gavel className="h-4 w-4 mr-2" />
-                          Kick
+                          Выгнать
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>

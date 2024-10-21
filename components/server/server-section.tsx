@@ -31,7 +31,7 @@ export function ServerSection({
         {label}
       </p>
       {role !== MemberRole.GUEST && sectionType === "channels" && (
-        <ActionTooltip label="Create Channel" side="top">
+        <ActionTooltip label="Создать канал" side="top">
           <button
             onClick={() => onOpen("createChannel", { channelType })}
             className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300 transition"
@@ -41,7 +41,7 @@ export function ServerSection({
         </ActionTooltip>
       )}
       {role === MemberRole.ADMIN && sectionType === "members" && (
-        <ActionTooltip label="Manage Members" side="top">
+        <ActionTooltip label="Управление участниками" side="top">
           <button
             onClick={() => onOpen("members", { server })}
             className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300 transition"
